@@ -3,7 +3,7 @@ import kareltherobot.*;
 
 
 /**
- * @author :  D. Appel
+ * @author :  E. Voss
  */
 public class Problem2 extends Robot
 {
@@ -12,8 +12,48 @@ public class Problem2 extends Robot
     }
     
     public void plantBeepers() {
+        while(!onBeeper()) {
+            checkWall();
+        }
+    }
+    
+    public boolean onBeeper() {
+        if(nextToABeeper()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void checkWall() {
+        if(frontIsClear()){
+            turnLeft();
+            if(frontIsClear()) {
+                placeBeeper();
+                move();
+            }
+        }
+        else {
+            moveNewPosition();
+        }
         
     }
-   
+    
+    public void turnRight() {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+    
+    public void placeBeeper() {
+        putBeeper();
+    }
+    
+    public void moveNewPosition() {
+        placeBeeper();
+        turnRight();
+        move();
+    }
 }
 

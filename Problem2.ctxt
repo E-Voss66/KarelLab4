@@ -1,8 +1,18 @@
 #BlueJ class context
 comment0.target=Problem2
-comment0.text=\r\n\ @author\ \:\ \ D.\ Appel\r\n
+comment0.text=\r\n\ @author\ \:\ \ E.\ Voss\r\n
 comment1.params=st\ av\ dir\ numBeepers
 comment1.target=Problem2(int,\ int,\ Direction,\ int)
 comment2.params=
 comment2.target=void\ plantBeepers()
-numComments=3
+comment3.params=
+comment3.target=boolean\ onBeeper()
+comment4.params=
+comment4.target=void\ checkWall()
+comment5.params=
+comment5.target=void\ turnRight()
+comment6.params=
+comment6.target=void\ placeBeeper()
+comment7.params=
+comment7.target=void\ moveNewPosition()
+numComments=8
